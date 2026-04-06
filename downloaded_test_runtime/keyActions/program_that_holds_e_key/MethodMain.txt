@@ -1,0 +1,32 @@
+public static void main(String[] args){
+    System.out.println("Attempting to press 'e' key via java.awt.Robot...");
+    try{
+        if(java.awt.GraphicsEnvironment.isHeadless()){
+            System.out.println("Headless environment detected; Robot cannot run.");
+        }else{
+            java.awt.Robot r=new java.awt.Robot();
+            r.setAutoDelay(40);
+            System.out.println("Focus the target window now (2s)...");
+            Thread.sleep(2000);
+            r.keyPress(java.awt.event.KeyEvent.VK_E);
+            r.keyRelease(java.awt.event.KeyEvent.VK_E);
+            System.out.println("Pressed 'e'.");
+        }
+    }catch(Throwable t){
+        System.out.println("Robot keypress failed: "+t);
+        t.printStackTrace(System.out);
+    }
+
+    try{
+        java.io.File f=new java.io.File(".ready");
+        if(f.exists()){
+            System.out.println(".ready already exists.");
+        }else{
+            boolean ok=f.createNewFile();
+            System.out.println("Created .ready file: "+ok);
+        }
+    }catch(Throwable t){
+        System.out.println("Failed to create .ready file: "+t);
+        t.printStackTrace(System.out);
+    }
+}

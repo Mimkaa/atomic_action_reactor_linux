@@ -1,0 +1,20 @@
+public static void main(String[] args) {
+    System.out.println("Pressing 's' key...");
+    try {
+        java.awt.Robot r = new java.awt.Robot();
+        r.setAutoDelay(50);
+        r.keyPress(java.awt.event.KeyEvent.VK_S);
+        r.keyRelease(java.awt.event.KeyEvent.VK_S);
+        System.out.println("Done.");
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    // Signal pipeline termination
+    try {
+        java.nio.file.Files.write(java.nio.file.Paths.get(".ready"), new byte[0]);
+        System.out.println("Created .ready");
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}

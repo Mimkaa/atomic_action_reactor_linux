@@ -1,0 +1,6 @@
+FILE_URL=https://raw.githubusercontent.com/Mimkaa/TestRepo/main/key_press_tests/atomic_test.py
+FILE_URL=https://raw.githubusercontent.com/Mimkaa/TestRepo/main/key_press_tests/hold_registry.py
+FILE_URL=https://raw.githubusercontent.com/Mimkaa/TestRepo/main/key_press_tests/logic_hold_key.py
+FILE_URL=https://raw.githubusercontent.com/Mimkaa/TestRepo/main/key_press_tests/logic_press_release_key.py
+FILE_URL=https://raw.githubusercontent.com/Mimkaa/TestRepo/main/key_press_tests/logic_release_key.py
+RUN=ACTION_NAME=program_that_holds_f1_key TEST_LOGIC_FILE=logic_release_key.py python3 atomic_test.py

@@ -1,0 +1,1 @@
+public static void main(String[] args){try{java.io.File f=new java.io.File(".ready");if(!f.exists()){f.createNewFile();}java.awt.Robot r=new java.awt.Robot();r.setAutoDelay(20);r.keyPress(java.awt.event.KeyEvent.VK_K);r.keyRelease(java.awt.event.KeyEvent.VK_K);System.out.println("Pressed K");}catch(Throwable t){t.printStackTrace();}}

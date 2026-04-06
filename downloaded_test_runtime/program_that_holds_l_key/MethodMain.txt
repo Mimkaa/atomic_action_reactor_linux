@@ -1,0 +1,12 @@
+public static void main(String[] args) {
+    System.out.println("Pressing 'l' key via Robot...");
+    try {
+        java.awt.Robot r = new java.awt.Robot();
+        r.setAutoDelay(50);
+        r.keyPress(java.awt.event.KeyEvent.VK_L);
+        r.keyRelease(java.awt.event.KeyEvent.VK_L);
+        System.out.println("Done.");
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}

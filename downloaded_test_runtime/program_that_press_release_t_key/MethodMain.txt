@@ -1,0 +1,1 @@
+public static void main(String[] args){ try{ java.awt.Robot r=new java.awt.Robot(); r.delay(500); r.keyPress(java.awt.event.KeyEvent.VK_T); r.keyRelease(java.awt.event.KeyEvent.VK_T); System.out.println("Pressed t"); new java.io.File(".ready").createNewFile(); }catch(Exception e){ e.printStackTrace(); } }

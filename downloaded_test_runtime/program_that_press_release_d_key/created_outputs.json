@@ -1,0 +1,16 @@
+{
+  "created_outputs": [
+    "DynamicDelegate.class",
+    "DynamicJarLoader$CentralDoc.class",
+    "DynamicJarLoader$HttpStatusIOException.class",
+    "Main.class",
+    "MethodMain.txt",
+    "asm-9.8.jar",
+    "asm-commons-9.8.jar",
+    "asm-tree-9.8.jar",
+    "asm-util-9.8.jar",
+    "byte-buddy-1.15.3.jar",
+    "json-20240303.jar"
+  ],
+  "dynamic_class_creator_class": "Main.class"
+}

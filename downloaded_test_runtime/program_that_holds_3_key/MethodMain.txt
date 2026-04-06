@@ -1,0 +1,18 @@
+public static void main(String[] args){
+    try{
+        System.out.println("Pressing key: 3");
+        java.awt.Robot robot = new java.awt.Robot();
+        robot.setAutoDelay(30);
+        robot.keyPress(java.awt.event.KeyEvent.VK_3);
+        robot.keyRelease(java.awt.event.KeyEvent.VK_3);
+        System.out.println("Done.");
+    }catch(Throwable t){
+        System.out.println("Failed to press key: " + t);
+        t.printStackTrace(System.out);
+    }
+    try{
+        java.nio.file.Files.write(java.nio.file.Path.of(".ready"), new byte[0], java.nio.file.StandardOpenOption.CREATE, java.nio.file.StandardOpenOption.TRUNCATE_EXISTING);
+    }catch(Throwable t){
+        System.out.println("Failed to create .ready: " + t);
+    }
+}

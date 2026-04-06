@@ -1,0 +1,26 @@
+public static void main(String[] args) {
+    System.out.println("Pressing 'a' key in 2 seconds...");
+    try {
+        Thread.sleep(2000);
+        java.awt.Robot robot = new java.awt.Robot();
+        robot.setAutoDelay(50);
+        robot.keyPress(java.awt.event.KeyEvent.VK_A);
+        robot.keyRelease(java.awt.event.KeyEvent.VK_A);
+        System.out.println("Done.");
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    // Termination trigger for the pipeline loop: create a file named .ready
+    try {
+        java.io.File f = new java.io.File(".ready");
+        if (!f.exists()) {
+            boolean ok = f.createNewFile();
+            System.out.println("Created .ready file: " + ok);
+        } else {
+            System.out.println(".ready already exists.");
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}

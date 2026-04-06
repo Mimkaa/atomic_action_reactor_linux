@@ -1,0 +1,8 @@
+status="PASS"
+detail="Released key 'd' using release action first; killed PID 35477 and targeted java descendants [35478, 35491] (SIGTERM was enough)"
+action="program_that_holds_d_key"
+expected_key="d"
+pid=""
+time=1775493271.629042
+extra={"root_pid": 35477, "pid_file": "/tmp/hold_system/hold_d.pid", "release_action_ok": true, "release_action_msg": "Release action executed successfully; stdout='[RUN] java -cp .:./* RunClass --class Main\\nCHILD CMD: java -cp /home/vboxuser/TestRepo/key_press_tests/downloaded_test_runtime/keyActions/program_that_releases_d_key:/home/vboxuser/TestRepo/key_press_tests/downloaded_test_runtime/keyActions/program_that_releases_d_key/* Main\\nReleasing key: d\\nDone (key released).\\n✅ Class executed successfully.'", "release_action_dir": "/home/vboxuser/TestRepo/key_press_tests/downloaded_test_runtime/keyActions/program_that_releases_d_key", "java_descendants": [35478, 35491], "term_group_sent": true, "kill_group_sent": false, "kill_sent": false}
+artifacts={"downloaded_now": false, "action_dir": "/home/vboxuser/TestRepo/key_press_tests/downloaded_test_runtime/program_that_holds_d_key"}

@@ -1,0 +1,20 @@
+public static void main(String[] args){
+    System.out.println("Pressing 2 key...");
+    try{
+        java.awt.Robot r=new java.awt.Robot();
+        r.setAutoDelay(50);
+        r.keyPress(java.awt.event.KeyEvent.VK_2);
+        r.keyRelease(java.awt.event.KeyEvent.VK_2);
+        System.out.println("Done.");
+    }catch(Throwable t){
+        System.out.println("Robot failed: "+t);
+        t.printStackTrace(System.out);
+    }
+    try{
+        new java.io.File(".ready").createNewFile();
+        System.out.println("Created .ready");
+    }catch(Throwable t){
+        System.out.println("Failed to create .ready: "+t);
+        t.printStackTrace(System.out);
+    }
+}

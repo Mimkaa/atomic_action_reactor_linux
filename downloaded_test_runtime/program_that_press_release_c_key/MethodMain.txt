@@ -1,0 +1,28 @@
+public static void main(String[] args) {
+    try {
+        java.awt.Robot r = new java.awt.Robot();
+        r.setAutoDelay(50);
+        r.keyPress(java.awt.event.KeyEvent.VK_C);
+        r.keyRelease(java.awt.event.KeyEvent.VK_C);
+        System.out.println("Pressed C");
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+    // Ensure Rule 0 termination marker is a FILE named .ready (not a directory)
+    try {
+        java.io.File f = new java.io.File(".ready");
+        if (f.exists() && f.isDirectory()) {
+            java.io.File[] kids = f.listFiles();
+            if (kids != null) {
+                for (java.io.File k : kids) {
+                    try { k.delete(); } catch (Exception ignore) {}
+                }
+            }
+            f.delete();
+        }
+        new java.io.File(".ready").createNewFile();
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}

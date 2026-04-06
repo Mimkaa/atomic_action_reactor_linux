@@ -1,0 +1,14 @@
+public static void main(String[] args){
+    System.out.println("Attempting to press 'b' key using java.awt.Robot...");
+    try{
+        java.awt.Robot robot = new java.awt.Robot();
+        robot.setAutoDelay(50);
+        robot.delay(500);
+        robot.keyPress(java.awt.event.KeyEvent.VK_B);
+        robot.keyRelease(java.awt.event.KeyEvent.VK_B);
+        System.out.println("Pressed 'b'. (Ensure an input field/window has focus.)");
+    }catch(Exception e){
+        System.out.println("Failed to press key: "+e);
+        e.printStackTrace();
+    }
+}
