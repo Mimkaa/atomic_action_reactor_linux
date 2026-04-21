@@ -1,0 +1,7 @@
+test_to_press_release_g.txt
+test_to_press_release_i.txt
+test_to_press_release_t.txt
+test_to_press_release_l.txt
+test_to_press_release_a.txt
+test_to_press_release_b.txt
+test_to_press_release_enter.txt
